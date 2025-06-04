@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+template = "*"
+telegram = "*"
+python-telegram-bot = "*"
+twilio = "*"
+environs = {extras = ["django"], version = "==8.0.0"}
+marshmallow = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"
