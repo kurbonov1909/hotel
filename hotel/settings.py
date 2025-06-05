@@ -10,11 +10,15 @@ ALLOWED_HOSTS = ['hotel-65we.onrender.com']
 # Ishlab chiqishda qulayligi uchun vaqtincha '*' ishlatsa bo'ladi, lekin prodakshnda aniq hostni ko'rsatish kerak.
 
 # Static files
+# STATIC_URL = '/static/'
+# STATIC_ROOT = BASE_DIR / 'staticfiles'   # collectstatic shu papkaga fayllarni to‘playdi
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",  # agar loyihada static papka bo‘lsa
+# ]
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'   # collectstatic shu papkaga fayllarni to‘playdi
-STATICFILES_DIRS = [
-    BASE_DIR / "static",  # agar loyihada static papka bo‘lsa
-]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [BASE_DIR / 'static']  # bu sizning local static fayllaringiz manzili
+
 
 # WhiteNoise sozlamalari (statik fayllarni efficient xizmat qilish uchun)
 INSTALLED_APPS = [
@@ -27,7 +31,10 @@ INSTALLED_APPS = [
     'myapp',  # O'zingizning app nomi
 ]
 
+
 MIDDLEWARE = [
+     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',  # statik fayllar uchun
     'django.contrib.sessions.middleware.SessionMiddleware',
