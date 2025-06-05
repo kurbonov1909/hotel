@@ -6,8 +6,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-76lqrn-p14elr7b$mdr+@78tnlb0r%5g+6b%h7ij!pqz1n+f!a'
 
 DEBUG = False
-
-ALLOWED_HOSTS = ['*']  # Render yoki boshqa hostlar uchun '*' vaqtinchalik ishlaydi
+ALLOWED_HOSTS = ['hotel-65we.onrender.com']
+  # Render yoki boshqa hostlar uchun '*' vaqtinchalik ishlaydi
 
 # Static files
 STATIC_URL = '/static/'
