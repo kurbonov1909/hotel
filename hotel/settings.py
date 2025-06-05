@@ -12,6 +12,7 @@ ALLOWED_HOSTS = ['hotel-65we.onrender.com']
 # Static files
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+ROOT_URLCONF = 'hotel.urls'
 
 # Templates
 TEMPLATES = [
