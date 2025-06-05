@@ -1,6 +1,5 @@
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-76lqrn-p14elr7b$mdr+@78tnlb0r%5g+6b%h7ij!pqz1n+f!a'
 
@@ -9,15 +8,14 @@ DEBUG = False
 ALLOWED_HOSTS = ['hotel-65we.onrender.com']
 # Ishlab chiqishda qulayligi uchun vaqtincha '*' ishlatsa bo'ladi, lekin prodakshnda aniq hostni ko'rsatish kerak.
 
-# Static files
-# STATIC_URL = '/static/'
-# STATIC_ROOT = BASE_DIR / 'staticfiles'   # collectstatic shu papkaga fayllarni to‘playdi
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",  # agar loyihada static papka bo‘lsa
-# ]
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [BASE_DIR / 'static']  # bu sizning local static fayllaringiz manzili
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 
 # WhiteNoise sozlamalari (statik fayllarni efficient xizmat qilish uchun)
